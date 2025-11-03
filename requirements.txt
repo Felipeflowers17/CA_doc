@@ -1,0 +1,19 @@
+# Lógica de negocio y configuración
+python-dotenv
+
+# Base de Datos y ORM
+sqlalchemy
+psycopg2-binary  # Driver para PostgreSQL
+
+# Web Scraping
+playwright
+
+# Interfaz (GUI)
+PySide6
+
+# Automatización
+apscheduler
+
+# Procesamiento y Exportación
+pandas
+openpyxl
