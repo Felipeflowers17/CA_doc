@@ -143,3 +143,48 @@ def insertar_o_actualizar_licitaciones(session: Session, compras: List[Dict]):
         logger.error(f"Error al hacer commit en la base de datos: {e}")
         session.rollback()
         raise
+
+def obtener_candidatas_para_fase_2(session: Session) -> List[CaLicitacion]:
+    """
+    Obtiene todas las CAs que pasaron la Fase 1 (tienen puntaje >= UMBRAL_FASE_2)
+    pero que aún no han sido procesadas por el scraper de Ficha Individual
+    (es decir, su 'descripcion' o 'productos_solicitados' están vacíos).
+    """
+    logger.info(f"Buscando CAs candidatas para scraping Fase 2 (Score >= {UMBRAL_FASE_2})...")
+    
+    candidatas = session.query(CaLicitacion).filter(
+        CaLicitacion.puntuacion_final >= UMBRAL_FASE_2,
+        CaLicitacion.descripcion.is_(None) # Filtra las que no tienen descripción
+    ).order_by(CaLicitacion.fecha_cierre.asc()).all() # Prioriza las más prontas a cerrar
+    
+    logger.info(f"Se encontraron {len(candidatas)} CAs para procesar en Fase 2.")
+    return candidatas
+
+def actualizar_ca_con_fase_2(session: Session, codigo_ca: str, datos_fase_2: Dict, puntuacion_total: int):
+    """
+    Actualiza una CA existente con los datos detallados de la Fase 2 
+    y su puntuación final total (Fase 1 + Fase 2).
+    """
+    try:
+        licitacion = session.query(CaLicitacion).filter_by(codigo_ca=codigo_ca).first()
+        if not licitacion:
+            logger.error(f"[Fase 2] No se encontró la CA {codigo_ca} en la BD para actualizar.")
+            return
+
+        # Actualizar campos de la Fase 2 [cite: 167]
+        licitacion.descripcion = datos_fase_2.get('descripcion')
+        licitacion.productos_solicitados = datos_fase_2.get('productos_solicitados')
+        licitacion.direccion_entrega = datos_fase_2.get('direccion_entrega')
+        licitacion.fecha_cierre_p1 = datos_fase_2.get('fecha_cierre_p1')
+        licitacion.fecha_cierre_p2 = datos_fase_2.get('fecha_cierre_p2')
+        
+        # Actualizar la puntuación final [cite: 164]
+        licitacion.puntuacion_final = puntuacion_total
+        
+        session.commit()
+        logger.debug(f"[Fase 2] CA {codigo_ca} actualizada con éxito. Nueva puntuación: {puntuacion_total}")
+
+    except Exception as e:
+        logger.error(f"[Fase 2] Error al actualizar CA {codigo_ca}: {e}")
+        session.rollback()
+        raise

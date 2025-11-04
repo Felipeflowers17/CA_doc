@@ -6,7 +6,7 @@ from typing import Optional, Dict, Callable
 from src.utils.logger import configurar_logger
 from src.db.db_service import SessionLocal, insertar_o_actualizar_licitaciones
 from . import api_handler
-from .url_builder import construir_url_listado
+from .url_builder import construir_url_listado, construir_url_ficha, construir_url_api_ficha
 from config.config import (
     MODO_HEADLESS,
     TIMEOUT_REQUESTS,
@@ -206,3 +206,68 @@ def run_scraper_listado(filtros: Optional[Dict] = None, max_paginas: Optional[in
             logger.info(f"Página procesada: {paginas_procesadas} / {limite if limite > 0 else (paginas_procesadas if paginas_procesadas > 0 else 'N/A')}")
             logger.info(f"Total compras procesadas: {total_compras_procesadas}")
             logger.info("="*60)
+            
+
+def scrape_ficha_detalle_api(page: Page, codigo_ca: str) -> Optional[Dict]:
+    """
+    Scrapea la Ficha Individual de una CA (el segundo tipo de scraping)
+    utilizando el listener de la API (mucho más robusto que el HTML).
+    
+    Retorna un diccionario con los datos o None si falla.
+    """
+    
+    # URL de la API que vamos a escuchar
+    url_api_ficha = construir_url_api_ficha(codigo_ca)
+    
+    # URL de la página web que vamos a visitar (para triggerear la API)
+    url_web_ficha = construir_url_ficha(codigo_ca)
+    
+    logger.info(f"[Fase 2] Scrapeando Ficha: {url_web_ficha}")
+
+    try:
+        # 1. Configurar el listener ANTES de navegar
+        predicate = lambda response: (
+            url_api_ficha in response.url and
+            response.status == 200
+        )
+
+        with page.expect_response(predicate, timeout=TIMEOUT_REQUESTS * 1000) as response_info:
+            # 2. Navegar a la página (esto dispara la llamada a la API)
+            logger.debug(f"[{codigo_ca}] Navegando a la ficha web para triggerear la API...")
+            page.goto(url_web_ficha, wait_until='networkidle')
+        
+        logger.debug(f"[{codigo_ca}] Respuesta API de Ficha recibida.")
+        response = response_info.value
+        datos_api_ficha = response.json()
+
+        # 3. Validar y extraer el payload
+        if 'success' not in datos_api_ficha or datos_api_ficha['success'] != 'OK':
+            logger.warning(f"[{codigo_ca}] Respuesta API de Ficha sin 'success': 'OK'.")
+            return None
+        
+        if 'payload' not in datos_api_ficha:
+            logger.warning(f"[{codigo_ca}] Respuesta API de Ficha sin 'payload'.")
+            return None
+
+        payload = datos_api_ficha['payload']
+        
+        # 4. Mapear los datos que nos interesan
+        datos_extraidos = {
+            'descripcion': payload.get('descripcion'),
+            'direccion_entrega': payload.get('direccion_entrega'),
+            'fecha_cierre_p1': payload.get('fecha_cierre_primer_llamado'),
+            'fecha_cierre_p2': payload.get('fecha_cierre_segundo_llamado'),
+            
+            # --- ¡ESTA ES LA LÍNEA CORREGIDA! ---
+            'productos_solicitados': payload.get('productos_solicitados', [])
+        }
+        
+        logger.info(f"[{codigo_ca}] Ficha procesada. Productos encontrados: {len(datos_extraidos['productos_solicitados'])}")
+        return datos_extraidos
+
+    except Exception as e:
+        if "Timeout" in str(e):
+             logger.error(f"[{codigo_ca}] TIMEOUT en Ficha Individual. La API no respondió a tiempo.")
+        else:
+            logger.error(f"[{codigo_ca}] ERROR crítico al scrapear Ficha Individual: {e}")
+        return None

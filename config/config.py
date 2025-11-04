@@ -21,6 +21,7 @@ DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NA
 
 # --- Configuración de Scraping ---
 URL_BASE_WEB = "https://buscador.mercadopublico.cl"
+URL_BASE_API = "https://api.buscador.mercadopublico.cl"
 
 # Tiempos de espera y delays (en segundos)
 TIMEOUT_REQUESTS = 30  # 30 segundos de espera máxima por página

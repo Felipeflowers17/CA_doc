@@ -6,7 +6,9 @@
 # Organismos que suman +5 puntos 
 ORGANISMOS_PRIORITARIOS = [
     "I MUNICIPALIDAD DE CANELA",
-    "Departamento Provincial de Educación Arauco"
+    "Departamento Provincial de Educación Arauco",
+    "SERVICIO LOCAL DE EDUCACIÓN PÚBLICA DEL ELQUI"
+
 
     # ... agregar todos los organismos de alto interés aquí ...
 ]
@@ -26,9 +28,9 @@ KEYWORDS_TITULO = [
 
 # Palabras clave en PRODUCTOS SOLICITADOS  que suman +5 puntos (para Fase 2) 
 KEYWORDS_PRODUCTOS_ALTO_VALOR = [
-    "niples de tuberia",
-    "codos de tubo",
-    "fitting",
-    "valvula",
+    "Alfombras", "Cartuchos de tinta",
+    "Soportes o estantes para pipetas", "medidores de altura",
+    "Perfiles de hierro", "brocas", "Art\u00edculos de papeler\u00eda"
+    
     # ... agregar todos los productos de alto valor aquí ...
 ]

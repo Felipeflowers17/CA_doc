@@ -1,5 +1,5 @@
 from typing import Dict, Optional
-from config.config import URL_BASE_WEB # Importamos la URL desde config
+from config.config import URL_BASE_WEB, URL_BASE_API
 
 def construir_url_listado(numero_pagina: int = 1, filtros: Optional[Dict] = None):
     """
@@ -38,3 +38,8 @@ def construir_url_ficha(codigo_compra: str):
     Construye la URL para la ficha individual de una compra.
     """
     return f"{URL_BASE_WEB}/ficha?code={codigo_compra}"
+def construir_url_api_ficha(codigo_compra: str):
+    """
+    Construye la URL para la API de la ficha individual.
+    """
+    return f"{URL_BASE_API}/compra-agil?action=ficha&code={codigo_compra}"
