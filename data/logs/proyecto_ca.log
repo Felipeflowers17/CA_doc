@@ -1989,3 +1989,112 @@
 2025-11-03 23:49:46 - run_fase_2 - INFO - CAs para procesar: 18
 2025-11-03 23:49:46 - run_fase_2 - INFO - Procesadas exitosamente: 18
 2025-11-03 23:49:46 - run_fase_2 - INFO - ============================================================
+2025-11-03 23:59:04 - gui_main - INFO - Iniciando aplicación GUI...
+2025-11-03 23:59:04 - gui_main - INFO - Ventana principal (GUI) inicializada.
+2025-11-04 00:08:04 - gui_main - INFO - Iniciando aplicación GUI...
+2025-11-04 00:08:04 - gui_main - INFO - Ventana principal (GUI) inicializada.
+2025-11-04 00:08:04 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:08:04 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:08:05 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:08:05 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:08:05 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:09:20 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:09:20 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:09:20 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:09:20 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:09:20 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:09:21 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:09:21 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:09:21 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:09:21 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:09:21 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:09:22 - gui_main - INFO - Botón 'Exportar Reporte Excel' presionado.
+2025-11-04 00:18:41 - gui_main - INFO - Iniciando aplicación GUI...
+2025-11-04 00:18:41 - gui_main - INFO - Ventana principal (GUI) inicializada.
+2025-11-04 00:18:41 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:18:41 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:18:41 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:18:41 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:18:41 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:18:43 - gui_main - DEBUG - Menú contextual para CA ID: 114 (Código: 1461054-416-COT25)
+2025-11-04 00:18:56 - gui_main - DEBUG - Menú contextual para CA ID: 120 (Código: 3754-233-COT25)
+2025-11-04 00:18:58 - gui_main - INFO - Acción: Marcar como favorito ID: 120
+2025-11-04 00:18:58 - db_service - DEBUG - GUI: Gestionando favorito. ID: 120, Set Favorito: True
+2025-11-04 00:18:58 - db_service - INFO - CA 120 insertada en seguimiento como favorito.
+2025-11-04 00:18:58 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:18:58 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:18:58 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:18:58 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:18:58 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:19:04 - gui_main - DEBUG - Menú contextual para CA ID: 121 (Código: 1461054-409-COT25)
+2025-11-04 00:19:06 - gui_main - INFO - Acción: Marcar como favorito ID: 121
+2025-11-04 00:19:06 - db_service - DEBUG - GUI: Gestionando favorito. ID: 121, Set Favorito: True
+2025-11-04 00:19:06 - db_service - INFO - CA 121 insertada en seguimiento como favorito.
+2025-11-04 00:19:06 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:19:06 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:19:06 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:19:06 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:19:06 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:19:08 - gui_main - DEBUG - Menú contextual para CA ID: 121 (Código: 1461054-409-COT25)
+2025-11-04 00:19:10 - gui_main - DEBUG - Menú contextual para CA ID: 120 (Código: 3754-233-COT25)
+2025-11-04 00:19:14 - gui_main - INFO - Acción: Ver ficha web: 3754-233-COT25
+2025-11-04 00:19:33 - gui_main - DEBUG - Menú contextual para CA ID: 121 (Código: 1461054-409-COT25)
+2025-11-04 00:19:36 - gui_main - INFO - Acción: Eliminar seguimiento ID: 121
+2025-11-04 00:19:36 - db_service - DEBUG - GUI: Gestionando favorito. ID: 121, Set Favorito: False
+2025-11-04 00:19:36 - db_service - INFO - CA 121 actualizada a es_favorito=False
+2025-11-04 00:19:36 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:19:36 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:19:36 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:19:36 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:19:36 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:19:41 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:19:41 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:19:41 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:19:41 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:19:41 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:27:29 - gui_main - INFO - Iniciando aplicación GUI...
+2025-11-04 00:27:29 - gui_main - INFO - Ventana principal (GUI) inicializada.
+2025-11-04 00:27:29 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:27:29 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:27:29 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:27:29 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:27:29 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:27:52 - gui_main - DEBUG - Menú contextual para CA ID: 114 (Código: 1461054-416-COT25)
+2025-11-04 00:27:54 - gui_main - INFO - Acción: Marcar como favorito ID: 114
+2025-11-04 00:27:54 - db_service - DEBUG - GUI: Gestionando favorito. ID: 114, Set Favorito: True
+2025-11-04 00:27:54 - db_service - INFO - CA 114 insertada en seguimiento como favorito.
+2025-11-04 00:27:54 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:27:54 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:27:54 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:27:54 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:27:54 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:28:00 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:28:00 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:28:00 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:28:00 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:28:00 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:28:01 - gui_main - INFO - Botón 'Exportar Reporte Excel' presionado.
+2025-11-04 00:28:01 - excel_service - INFO - Iniciando generación de Reporte Excel: Reporte_CA_20251104_002801.xlsx
+2025-11-04 00:28:01 - excel_service - DEBUG - Obteniendo datos de Hoja 1 (Candidatas)...
+2025-11-04 00:28:01 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:28:01 - excel_service - DEBUG - Obteniendo datos de Hoja 2 (Relevantes)...
+2025-11-04 00:28:01 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:28:01 - excel_service - DEBUG - Obteniendo datos de Hoja 3 (Seguimiento)...
+2025-11-04 00:28:01 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:28:02 - excel_service - INFO - Reporte Excel generado exitosamente en: C:\Users\jdnic\Desktop\Aplicacion\versiones\CA_proyecto\data\exports\Reporte_CA_20251104_002801.xlsx
+2025-11-04 00:34:16 - gui_main - INFO - Iniciando aplicación GUI...
+2025-11-04 00:34:16 - gui_main - INFO - Ventana principal (GUI) inicializada.
+2025-11-04 00:34:16 - gui_main - INFO - Refrescando datos desde la Base de Datos...
+2025-11-04 00:34:16 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:34:17 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:34:17 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:34:17 - gui_main - INFO - Datos refrescados en la GUI.
+2025-11-04 00:34:24 - gui_main - INFO - Botón 'Exportar Reporte Excel' presionado.
+2025-11-04 00:34:24 - excel_service - INFO - Iniciando generación de Reporte Excel: Reporte_CA_20251104_003424.xlsx
+2025-11-04 00:34:24 - excel_service - DEBUG - Obteniendo datos de Hoja 1 (Candidatas)...
+2025-11-04 00:34:24 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 1 (Score >= 5)
+2025-11-04 00:34:24 - excel_service - DEBUG - Obteniendo datos de Hoja 2 (Relevantes)...
+2025-11-04 00:34:24 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 2 (Score >= 9)
+2025-11-04 00:34:24 - excel_service - DEBUG - Obteniendo datos de Hoja 3 (Seguimiento)...
+2025-11-04 00:34:24 - db_service - DEBUG - GUI: Obteniendo datos para Pestaña 3 (Favoritos)
+2025-11-04 00:34:25 - excel_service - INFO - Reporte Excel generado exitosamente en: C:\Users\jdnic\Desktop\Aplicacion\versiones\CA_proyecto\data\exports\Reporte_CA_20251104_003424.xlsx

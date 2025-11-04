@@ -1,20 +1,20 @@
 import os
 import datetime
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, select, join
 from sqlalchemy.orm import sessionmaker, Session
 from config.config import DATABASE_URL
-from .db_models import Base, CaLicitacion 
+from .db_models import Base, CaLicitacion, CaSeguimiento
 from typing import List, Dict
 
 # --- Importar el logger ---
 from src.utils.logger import configurar_logger
 logger = configurar_logger('db_service')
 # ---
-
-# --- ¡NUEVAS IMPORTACIONES! ---
 # Importamos el motor de puntuación y el umbral
 from src.logic.score_engine import calcular_puntuacion_fase_1
-from config.score_config import UMBRAL_FASE_2
+from config.score_config import UMBRAL_FASE_2, UMBRAL_FINAL
+
+
 # ---
 
 try:
@@ -188,3 +188,102 @@ def actualizar_ca_con_fase_2(session: Session, codigo_ca: str, datos_fase_2: Dic
         logger.error(f"[Fase 2] Error al actualizar CA {codigo_ca}: {e}")
         session.rollback()
         raise
+
+# --- Funciones para la GUI (Fase 3) ---
+
+def obtener_datos_tab1_candidatas(session: Session) -> List[CaLicitacion]:
+    """
+    GUI: Obtiene las CAs para la Pestaña 1.
+    (ca_licitacion donde puntuacion_final >= 5)
+    """
+    logger.debug(f"GUI: Obteniendo datos para Pestaña 1 (Score >= {UMBRAL_FASE_2})")
+    return session.query(CaLicitacion).filter(
+        CaLicitacion.puntuacion_final >= UMBRAL_FASE_2
+    ).order_by(CaLicitacion.puntuacion_final.desc()).all()
+
+
+def obtener_datos_tab2_relevantes(session: Session) -> List[CaLicitacion]:
+    """
+    GUI: Obtiene las CAs para la Pestaña 2.
+    (ca_licitacion donde puntuacion_final >= 9)
+    """
+    logger.debug(f"GUI: Obteniendo datos para Pestaña 2 (Score >= {UMBRAL_FINAL})")
+    return session.query(CaLicitacion).filter(
+        CaLicitacion.puntuacion_final >= UMBRAL_FINAL
+    ).order_by(CaLicitacion.puntuacion_final.desc()).all()
+
+
+def obtener_datos_tab3_seguimiento(session: Session) -> List[CaLicitacion]:
+    """
+    GUI: Obtiene las CAs para la Pestaña 3.
+    (JOIN ca_licitacion con ca_seguimiento donde es_favorito = TRUE)
+    """
+    logger.debug("GUI: Obteniendo datos para Pestaña 3 (Favoritos)")
+    
+    # Construimos un JOIN explícito
+    stmt = (
+        select(CaLicitacion)
+        .select_from(
+            join(CaLicitacion, CaSeguimiento, 
+                 CaLicitacion.ca_id == CaSeguimiento.ca_id)
+        )
+        .filter(CaSeguimiento.es_favorito == True)
+        .order_by(CaLicitacion.fecha_cierre.asc())
+    )
+    
+    # execute() retorna 'scalars' que son los objetos CaLicitacion
+    return session.scalars(stmt).all()
+
+def gestionar_favorito(session: Session, ca_id: int, es_favorito: bool):
+    """
+    Marca o desmarca una CA como favorita.
+    Crea o actualiza el registro en 'ca_seguimiento'.
+    """
+    logger.debug(f"GUI: Gestionando favorito. ID: {ca_id}, Set Favorito: {es_favorito}")
+    
+    # Buscar si ya existe un registro de seguimiento
+    seguimiento = session.query(CaSeguimiento).filter_by(ca_id=ca_id).first()
+    
+    if seguimiento:
+        # Si existe, solo actualiza el estado 'es_favorito'
+        seguimiento.es_favorito = es_favorito
+        logger.info(f"CA {ca_id} actualizada a es_favorito={es_favorito}")
+    else:
+        # Si no existe, crear un nuevo registro
+        # (Esto solo debería pasar si se marca como favorito, 
+        # pero lo manejamos por si acaso)
+        if es_favorito:
+            nuevo_seguimiento = CaSeguimiento(
+                ca_id=ca_id,
+                es_favorito=True
+            )
+            session.add(nuevo_seguimiento)
+            logger.info(f"CA {ca_id} insertada en seguimiento como favorito.")
+        
+    try:
+        session.commit()
+    except Exception as e:
+        logger.error(f"Error al gestionar favorito para CA {ca_id}: {e}")
+        session.rollback()
+
+
+def eliminar_ca_definitivamente(session: Session, ca_id: int):
+    """
+    Elimina una CA de la base de datos (DELETE en ca_licitacion).
+    El cascade (definido en db_models.py) borrará los registros
+    relacionados en ca_seguimiento y ca_historial_estado.
+    """
+    logger.debug(f"GUI: Eliminación definitiva de CA ID: {ca_id}")
+    
+    licitacion = session.query(CaLicitacion).filter_by(ca_id=ca_id).first()
+    
+    if licitacion:
+        try:
+            session.delete(licitacion)
+            session.commit()
+            logger.info(f"CA {ca_id} eliminada permanentemente de la BD.")
+        except Exception as e:
+            logger.error(f"Error en eliminación definitiva de CA {ca_id}: {e}")
+            session.rollback()
+    else:
+        logger.warning(f"No se encontró CA {ca_id} para eliminación definitiva.")
