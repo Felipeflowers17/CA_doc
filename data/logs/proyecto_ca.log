@@ -1,189 +1,377 @@
-2025-11-03 13:35:15 - scraper_service - INFO - ============================================================
-2025-11-03 13:35:15 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
-2025-11-03 13:35:15 - scraper_service - INFO - ============================================================
-2025-11-03 13:35:15 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-11-01', 'date_to': '2025-11-03'}
-2025-11-03 13:35:15 - scraper_service - INFO - Límite de páginas: 3
-2025-11-03 13:35:16 - scraper_service - INFO - Iniciando navegador (Playwright)...
-2025-11-03 13:35:21 - scraper_service - INFO - Navegando a página 1...
-2025-11-03 13:35:21 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=1&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 13:35:28 - scraper_service - DEBUG - Respuesta API válida capturada.
-2025-11-03 13:35:31 - scraper_service - INFO - Página 1 procesada: 15 compras encontradas.
-2025-11-03 13:35:31 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 13:35:31 - scraper_service - INFO - Guardadas 15 compras en PostgreSQL.
-2025-11-03 13:35:31 - scraper_service - INFO - Total resultados encontrados: 3314
-2025-11-03 13:35:31 - scraper_service - INFO - Total páginas a scrapear: 221
-2025-11-03 13:35:32 - scraper_service - INFO - Navegando a página 2...
-2025-11-03 13:35:32 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=2&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 13:35:34 - scraper_service - DEBUG - Respuesta API válida capturada.
-2025-11-03 13:35:37 - scraper_service - INFO - Página 2 procesada: 15 compras encontradas.
-2025-11-03 13:35:37 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 13:35:37 - scraper_service - INFO - Guardadas 15 compras en PostgreSQL.
-2025-11-03 13:35:38 - scraper_service - INFO - Navegando a página 3...
-2025-11-03 13:35:38 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=3&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 13:35:41 - scraper_service - DEBUG - Respuesta API válida capturada.
-2025-11-03 13:35:44 - scraper_service - INFO - Página 3 procesada: 15 compras encontradas.
-2025-11-03 13:35:44 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 13:35:44 - scraper_service - INFO - Guardadas 15 compras en PostgreSQL.
-2025-11-03 13:35:45 - scraper_service - INFO - Navegador (Playwright) cerrado.
-2025-11-03 13:35:45 - scraper_service - INFO - ============================================================
-2025-11-03 13:35:45 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
-2025-11-03 13:35:45 - scraper_service - INFO - Tiempo total: 30.09 segundos
-2025-11-03 13:35:45 - scraper_service - INFO - Páginas procesadas: 3 / 3
-2025-11-03 13:35:45 - scraper_service - INFO - Total compras guardadas: 45
-2025-11-03 13:35:45 - scraper_service - INFO - ============================================================
-2025-11-03 14:41:35 - db_service - INFO - Inicializando base de datos...
-2025-11-03 14:41:35 - db_service - INFO - Tablas creadas exitosamente (si no existían).
-2025-11-03 14:43:55 - scraper_service - INFO - ============================================================
-2025-11-03 14:43:55 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
-2025-11-03 14:43:55 - scraper_service - INFO - ============================================================
-2025-11-03 14:43:55 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-11-01', 'date_to': '2025-11-03'}
-2025-11-03 14:43:55 - scraper_service - INFO - Límite de páginas: 3
-2025-11-03 14:43:56 - scraper_service - INFO - Iniciando navegador (Playwright)...
-2025-11-03 14:43:57 - scraper_service - INFO - Navegando a página 1...
-2025-11-03 14:43:57 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=1&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 14:44:04 - scraper_service - DEBUG - Respuesta API válida capturada.
-2025-11-03 14:44:07 - scraper_service - INFO - Página 1 procesada: 15 compras encontradas.
-2025-11-03 14:44:07 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 14:44:07 - db_service - INFO - Commit exitoso: 15 nuevos, 0 actualizados.
-2025-11-03 14:44:07 - scraper_service - INFO - Guardadas 15 compras en PostgreSQL.
-2025-11-03 14:44:07 - scraper_service - INFO - Total resultados encontrados: 3639
-2025-11-03 14:44:07 - scraper_service - INFO - Total páginas a scrapear: 243
-2025-11-03 14:44:08 - scraper_service - INFO - Navegando a página 2...
-2025-11-03 14:44:08 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=2&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 14:44:11 - scraper_service - DEBUG - Respuesta API válida capturada.
-2025-11-03 14:44:14 - scraper_service - INFO - Página 2 procesada: 15 compras encontradas.
-2025-11-03 14:44:14 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 14:44:14 - db_service - INFO - Commit exitoso: 0 nuevos, 15 actualizados.
-2025-11-03 14:44:14 - scraper_service - INFO - Guardadas 15 compras en PostgreSQL.
-2025-11-03 14:44:15 - scraper_service - INFO - Navegando a página 3...
-2025-11-03 14:44:15 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=3&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 14:44:17 - scraper_service - DEBUG - Respuesta API válida capturada.
-2025-11-03 14:44:20 - scraper_service - INFO - Página 3 procesada: 15 compras encontradas.
-2025-11-03 14:44:20 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 14:44:20 - db_service - INFO - Commit exitoso: 0 nuevos, 15 actualizados.
-2025-11-03 14:44:20 - scraper_service - INFO - Guardadas 15 compras en PostgreSQL.
-2025-11-03 14:44:21 - scraper_service - INFO - Navegador (Playwright) cerrado.
-2025-11-03 14:44:21 - scraper_service - INFO - ============================================================
-2025-11-03 14:44:21 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
-2025-11-03 14:44:21 - scraper_service - INFO - Tiempo total: 26.16 segundos
-2025-11-03 14:44:21 - scraper_service - INFO - Páginas procesadas: 3 / 3
-2025-11-03 14:44:21 - scraper_service - INFO - Total compras guardadas: 45
-2025-11-03 14:44:21 - scraper_service - INFO - ============================================================
-2025-11-03 15:03:58 - db_service - INFO - Inicializando base de datos...
-2025-11-03 15:03:58 - db_service - INFO - Tablas creadas exitosamente (si no existían).
-2025-11-03 15:04:38 - scraper_service - INFO - ============================================================
-2025-11-03 15:04:38 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
-2025-11-03 15:04:38 - scraper_service - INFO - ============================================================
-2025-11-03 15:04:38 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-11-01', 'date_to': '2025-11-03'}
-2025-11-03 15:04:38 - scraper_service - INFO - Límite de páginas: 3
-2025-11-03 15:04:38 - scraper_service - INFO - Iniciando navegador (Playwright)...
-2025-11-03 15:04:40 - scraper_service - INFO - Navegando a página 1...
-2025-11-03 15:04:40 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=1&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:05:00 - scraper_service - ERROR - TIMEOUT en página 1. La API no respondió a tiempo.
-2025-11-03 15:05:00 - scraper_service - CRITICAL - FALLO EL PROCESO DE SCRAPING: No se pudo obtener la página 1. Abortando.
-2025-11-03 15:05:00 - scraper_service - INFO - ============================================================
-2025-11-03 15:05:00 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
-2025-11-03 15:05:00 - scraper_service - INFO - Tiempo total: 22.67 segundos
-2025-11-03 15:11:36 - scraper_service - INFO - ============================================================
-2025-11-03 15:11:36 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
-2025-11-03 15:11:36 - scraper_service - INFO - ============================================================
-2025-11-03 15:11:36 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-11-01', 'date_to': '2025-11-03'}
-2025-11-03 15:11:36 - scraper_service - INFO - Límite de páginas: 3
-2025-11-03 15:11:37 - scraper_service - INFO - Iniciando navegador (Playwright)...
-2025-11-03 15:11:38 - scraper_service - INFO - Navegando a página 1...
-2025-11-03 15:11:38 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=1&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:11:43 - scraper_service - INFO - Página 1 procesada: 15 compras encontradas.
-2025-11-03 15:11:43 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 15:11:43 - db_service - INFO - Commit exitoso: 15 nuevos, 0 actualizados.
-2025-11-03 15:11:43 - scraper_service - INFO - Total resultados encontrados: 3752
-2025-11-03 15:11:43 - scraper_service - INFO - Total páginas a scrapear: 251
-2025-11-03 15:11:43 - scraper_service - INFO - Límite de páginas establecido en: 3
-2025-11-03 15:11:44 - scraper_service - INFO - Navegando a página 2...
-2025-11-03 15:11:44 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=2&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:12:04 - scraper_service - ERROR - TIMEOUT en página 2. La API no respondió a tiempo.
-2025-11-03 15:12:04 - scraper_service - WARNING - Se omite la página 2 por error.
-2025-11-03 15:12:05 - scraper_service - INFO - Navegando a página 3...
-2025-11-03 15:12:05 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=3&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:12:25 - scraper_service - ERROR - TIMEOUT en página 3. La API no respondió a tiempo.
-2025-11-03 15:12:25 - scraper_service - WARNING - Se omite la página 3 por error.
-2025-11-03 15:12:26 - scraper_service - INFO - Navegador (Playwright) cerrado.
-2025-11-03 15:12:26 - scraper_service - INFO - ============================================================
-2025-11-03 15:12:26 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
-2025-11-03 15:12:26 - scraper_service - INFO - Tiempo total: 50.59 segundos
-2025-11-03 15:12:26 - scraper_service - INFO - Páginas procesadas: 1 / 3
-2025-11-03 15:12:26 - scraper_service - INFO - Total compras procesadas: 15
-2025-11-03 15:12:26 - scraper_service - INFO - ============================================================
-2025-11-03 15:25:55 - scraper_service - INFO - ============================================================
-2025-11-03 15:25:55 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
-2025-11-03 15:25:55 - scraper_service - INFO - ============================================================
-2025-11-03 15:25:55 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-11-01', 'date_to': '2025-11-03'}
-2025-11-03 15:25:55 - scraper_service - INFO - Límite de páginas: 3
-2025-11-03 15:25:56 - scraper_service - INFO - Iniciando navegador (Playwright)...
-2025-11-03 15:25:57 - scraper_service - INFO - Navegando a página 1...
-2025-11-03 15:25:57 - scraper_service - DEBUG - Esperando respuesta de API para página 1...
-2025-11-03 15:26:17 - scraper_service - ERROR - TIMEOUT en página 1. La API no respondió a tiempo.
-2025-11-03 15:26:22 - scraper_service - CRITICAL - FALLO EL PROCESO DE SCRAPING: 'bool' object has no attribute 'result'
-2025-11-03 15:26:22 - scraper_service - INFO - ============================================================
-2025-11-03 15:26:22 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
-2025-11-03 15:26:22 - scraper_service - INFO - Tiempo total: 26.71 segundos
-2025-11-03 15:26:22 - scraper_service - INFO - Páginas procesadas: 0 / 3
-2025-11-03 15:26:22 - scraper_service - INFO - Total compras procesadas: 0
-2025-11-03 15:26:22 - scraper_service - INFO - ============================================================
-2025-11-03 15:27:13 - scraper_service - INFO - ============================================================
-2025-11-03 15:27:13 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
-2025-11-03 15:27:13 - scraper_service - INFO - ============================================================
-2025-11-03 15:27:13 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-11-01', 'date_to': '2025-11-03'}
-2025-11-03 15:27:13 - scraper_service - INFO - Límite de páginas: 3
-2025-11-03 15:27:14 - scraper_service - INFO - Iniciando navegador (Playwright)...
-2025-11-03 15:27:15 - scraper_service - INFO - Navegando a página 1...
-2025-11-03 15:27:15 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=1&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:27:18 - scraper_service - INFO - Página 1 procesada: 15 compras encontradas.
-2025-11-03 15:27:18 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 15:27:19 - db_service - INFO - Commit exitoso: 15 nuevos, 0 actualizados.
-2025-11-03 15:27:19 - scraper_service - INFO - Total resultados encontrados: 3993
-2025-11-03 15:27:19 - scraper_service - INFO - Total páginas a scrapear: 267
-2025-11-03 15:27:19 - scraper_service - INFO - Límite de páginas establecido en: 3
-2025-11-03 15:27:20 - scraper_service - INFO - Navegando a página 2...
-2025-11-03 15:27:20 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=2&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:27:40 - scraper_service - ERROR - TIMEOUT en página 2. La API no respondió a tiempo.
-2025-11-03 15:27:40 - scraper_service - WARNING - Se omite la página 2 por error.
-2025-11-03 15:27:41 - scraper_service - INFO - Navegando a página 3...
-2025-11-03 15:27:41 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=3&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:28:01 - scraper_service - ERROR - TIMEOUT en página 3. La API no respondió a tiempo.
-2025-11-03 15:28:01 - scraper_service - WARNING - Se omite la página 3 por error.
-2025-11-03 15:28:02 - scraper_service - INFO - Navegador (Playwright) cerrado.
-2025-11-03 15:28:02 - scraper_service - INFO - ============================================================
-2025-11-03 15:28:02 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
-2025-11-03 15:28:02 - scraper_service - INFO - Tiempo total: 48.74 segundos
-2025-11-03 15:28:02 - scraper_service - INFO - Páginas procesadas: 1 / 3
-2025-11-03 15:28:02 - scraper_service - INFO - Total compras procesadas: 15
-2025-11-03 15:28:02 - scraper_service - INFO - ============================================================
-2025-11-03 15:30:47 - scraper_service - INFO - ============================================================
-2025-11-03 15:30:47 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
-2025-11-03 15:30:47 - scraper_service - INFO - ============================================================
-2025-11-03 15:30:47 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-11-01', 'date_to': '2025-11-03'}
-2025-11-03 15:30:47 - scraper_service - INFO - Límite de páginas: 3
-2025-11-03 15:30:48 - scraper_service - INFO - Iniciando navegador (Playwright)...
-2025-11-03 15:30:49 - scraper_service - INFO - Navegando a página 1...
-2025-11-03 15:30:49 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=1&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:30:52 - scraper_service - INFO - Página 1 procesada: 15 compras encontradas.
-2025-11-03 15:30:52 - scraper_service - DEBUG - Iniciando guardado en BD para 15 items...
-2025-11-03 15:30:53 - db_service - INFO - Commit exitoso: 15 nuevos, 0 actualizados.
-2025-11-03 15:30:53 - scraper_service - INFO - Total resultados encontrados: 4060
-2025-11-03 15:30:53 - scraper_service - INFO - Total páginas a scrapear: 271
-2025-11-03 15:30:53 - scraper_service - INFO - Límite de páginas establecido en: 3
-2025-11-03 15:30:55 - scraper_service - INFO - Navegando a página 2...
-2025-11-03 15:30:55 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=2&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:31:25 - scraper_service - ERROR - TIMEOUT en página 2. La API no respondió a tiempo.
-2025-11-03 15:31:25 - scraper_service - WARNING - Se omite la página 2 por error.
-2025-11-03 15:31:27 - scraper_service - INFO - Navegando a página 3...
-2025-11-03 15:31:27 - scraper_service - DEBUG - URL: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=3&date_from=2025-11-01&date_to=2025-11-03&region=all
-2025-11-03 15:31:57 - scraper_service - ERROR - TIMEOUT en página 3. La API no respondió a tiempo.
-2025-11-03 15:31:57 - scraper_service - WARNING - Se omite la página 3 por error.
-2025-11-03 15:31:58 - scraper_service - INFO - Navegador (Playwright) cerrado.
-2025-11-03 15:31:58 - scraper_service - INFO - ============================================================
-2025-11-03 15:31:58 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
-2025-11-03 15:31:58 - scraper_service - INFO - Tiempo total: 70.94 segundos
-2025-11-03 15:31:58 - scraper_service - INFO - Páginas procesadas: 1 / 3
-2025-11-03 15:31:58 - scraper_service - INFO - Total compras procesadas: 15
-2025-11-03 15:31:58 - scraper_service - INFO - ============================================================
+2025-11-03 21:46:20 - scraper_service - INFO - ============================================================
+2025-11-03 21:46:20 - scraper_service - INFO - INICIANDO SCRAPER DE LISTADO - FASE 1 (Listado)
+2025-11-03 21:46:20 - scraper_service - INFO - ============================================================
+2025-11-03 21:46:20 - scraper_service - INFO - Filtros aplicados: {'date_from': '2025-10-29', 'date_to': '2025-11-03'}
+2025-11-03 21:46:20 - scraper_service - INFO - Límite de páginas: 5
+2025-11-03 21:46:21 - scraper_service - INFO - Iniciando navegador (Playwright)...
+2025-11-03 21:46:22 - scraper_service - INFO - Navegando a página 1: https://buscador.mercadopublico.cl/compra-agil?status=2&order_by=recent&page_number=1&date_from=2025-10-29&date_to=2025-11-03&region=all
+2025-11-03 21:46:22 - scraper_service - DEBUG - Configurando listener para API page_number=1...
+2025-11-03 21:46:22 - scraper_service - DEBUG - Ejecutando acción trigger para página 1...
+2025-11-03 21:46:29 - scraper_service - DEBUG - Respuesta API específica para página 1 recibida.
+2025-11-03 21:46:29 - scraper_service - INFO - Página 1 procesada: 15 compras encontradas.
+2025-11-03 21:46:29 - scraper_service - INFO - CÓDIGOS DE PÁGINA 1:
+2025-11-03 21:46:29 - scraper_service - INFO -   [1] 1461054-413-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [2] 1126922-1938-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [3] 1461054-412-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [4] 1057501-4161-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [5] 1461054-411-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [6] 1057501-4160-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [7] 1461054-410-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [8] 1233623-857-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [9] 1057501-4159-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [10] 3754-233-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [11] 1461054-409-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [12] 2269-79-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [13] 1484-224-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [14] 1461054-408-COT25
+2025-11-03 21:46:29 - scraper_service - INFO -   [15] 1233623-856-COT25
+2025-11-03 21:46:29 - scraper_service - INFO - Total resultados encontrados: 8015
+2025-11-03 21:46:29 - scraper_service - INFO - Total páginas a scrapear: 535
+2025-11-03 21:46:29 - scraper_service - INFO - Límite de páginas establecido en: 5
+2025-11-03 21:46:31 - scraper_service - INFO - --- Procesando Página 2 ---
+2025-11-03 21:46:31 - scraper_service - DEBUG - Buscando selector de paginador: 'button[aria-label="Go to next page"]'
+2025-11-03 21:46:31 - scraper_service - DEBUG - Botón 'Siguiente Página' encontrado y visible.
+2025-11-03 21:46:31 - scraper_service - DEBUG - Configurando listener para API page_number=2...
+2025-11-03 21:46:31 - scraper_service - DEBUG - Ejecutando acción trigger para página 2...
+2025-11-03 21:46:32 - scraper_service - DEBUG - Respuesta API específica para página 2 recibida.
+2025-11-03 21:46:32 - scraper_service - INFO - Página 2 procesada: 15 compras encontradas.
+2025-11-03 21:46:32 - scraper_service - INFO - CÓDIGOS DE PÁGINA 2:
+2025-11-03 21:46:32 - scraper_service - INFO -   [1] 1057501-4158-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [2] 1461054-407-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [3] 1057501-4157-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [4] 1233623-855-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [5] 1469-3745-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [6] 1057501-4156-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [7] 1461054-406-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [8] 1057501-4155-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [9] 1233623-854-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [10] 5504-442-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [11] 1469-3744-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [12] 1233623-853-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [13] 1469-3743-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [14] 3046-347-COT25
+2025-11-03 21:46:32 - scraper_service - INFO -   [15] 1469-3742-COT25
+2025-11-03 21:46:34 - scraper_service - INFO - --- Procesando Página 3 ---
+2025-11-03 21:46:34 - scraper_service - DEBUG - Buscando selector de paginador: 'button[aria-label="Go to next page"]'
+2025-11-03 21:46:34 - scraper_service - DEBUG - Botón 'Siguiente Página' encontrado y visible.
+2025-11-03 21:46:34 - scraper_service - DEBUG - Configurando listener para API page_number=3...
+2025-11-03 21:46:34 - scraper_service - DEBUG - Ejecutando acción trigger para página 3...
+2025-11-03 21:46:36 - scraper_service - DEBUG - Respuesta API específica para página 3 recibida.
+2025-11-03 21:46:36 - scraper_service - INFO - Página 3 procesada: 15 compras encontradas.
+2025-11-03 21:46:36 - scraper_service - INFO - CÓDIGOS DE PÁGINA 3:
+2025-11-03 21:46:36 - scraper_service - INFO -   [1] 1461054-405-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [2] 1469-3741-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [3] 560224-403-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [4] 1469-3739-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [5] 966131-68-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [6] 3149-366-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [7] 1469-3740-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [8] 5441-788-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [9] 1484-223-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [10] 5504-441-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [11] 560224-402-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [12] 655348-91-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [13] 1469-3738-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [14] 1469-3736-COT25
+2025-11-03 21:46:36 - scraper_service - INFO -   [15] 1469-3737-COT25
+2025-11-03 21:46:38 - scraper_service - INFO - --- Procesando Página 4 ---
+2025-11-03 21:46:38 - scraper_service - DEBUG - Buscando selector de paginador: 'button[aria-label="Go to next page"]'
+2025-11-03 21:46:38 - scraper_service - DEBUG - Botón 'Siguiente Página' encontrado y visible.
+2025-11-03 21:46:38 - scraper_service - DEBUG - Configurando listener para API page_number=4...
+2025-11-03 21:46:38 - scraper_service - DEBUG - Ejecutando acción trigger para página 4...
+2025-11-03 21:46:40 - scraper_service - DEBUG - Respuesta API específica para página 4 recibida.
+2025-11-03 21:46:40 - scraper_service - INFO - Página 4 procesada: 15 compras encontradas.
+2025-11-03 21:46:40 - scraper_service - INFO - CÓDIGOS DE PÁGINA 4:
+2025-11-03 21:46:40 - scraper_service - INFO -   [1] 2859-1409-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [2] 2701-816-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [3] 1484-222-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [4] 3046-346-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [5] 1393093-734-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [6] 3492-168-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [7] 2793-1169-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [8] 2776-1170-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [9] 2859-1408-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [10] 2701-815-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [11] 17120-60-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [12] 2730-417-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [13] 1469-3734-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [14] 1380-5629-COT25
+2025-11-03 21:46:40 - scraper_service - INFO -   [15] 3891-295-COT25
+2025-11-03 21:46:42 - scraper_service - INFO - --- Procesando Página 5 ---
+2025-11-03 21:46:42 - scraper_service - DEBUG - Buscando selector de paginador: 'button[aria-label="Go to next page"]'
+2025-11-03 21:46:42 - scraper_service - DEBUG - Botón 'Siguiente Página' encontrado y visible.
+2025-11-03 21:46:42 - scraper_service - DEBUG - Configurando listener para API page_number=5...
+2025-11-03 21:46:42 - scraper_service - DEBUG - Ejecutando acción trigger para página 5...
+2025-11-03 21:46:43 - scraper_service - DEBUG - Respuesta API específica para página 5 recibida.
+2025-11-03 21:46:43 - scraper_service - INFO - Página 5 procesada: 15 compras encontradas.
+2025-11-03 21:46:43 - scraper_service - INFO - CÓDIGOS DE PÁGINA 5:
+2025-11-03 21:46:43 - scraper_service - INFO -   [1] 1562-152-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [2] 2395-1069-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [3] 2776-1169-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [4] 1234683-84-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [5] 4858-731-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [6] 4858-732-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [7] 2859-1406-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [8] 2793-1168-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [9] 2909-1103-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [10] 608-6987-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [11] 2701-814-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [12] 835727-254-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [13] 1425773-57-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [14] 1485943-4-COT25
+2025-11-03 21:46:43 - scraper_service - INFO -   [15] 2401-901-COT25
+2025-11-03 21:46:45 - scraper_service - INFO - Navegador (Playwright) cerrado.
+2025-11-03 21:46:45 - scraper_service - INFO - ANÁLISIS DE DUPLICADOS...
+2025-11-03 21:46:45 - scraper_service - INFO - NO SE ENCONTRARON DUPLICADOS
+2025-11-03 21:46:45 - scraper_service - INFO - Compras únicas a guardar en BD: 75
+2025-11-03 21:46:45 - db_service - INFO - Recibidas 75 compras para procesar y puntuar...
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-413-COT25 (adquisicion de instrumentos mu...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-413-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-413-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1126922-1938-COT25 (rbd 22309 sep pg02 uniforme co...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1126922-1938-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1126922-1938-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-412-COT25 (adquisicion insumos y material...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-412-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-412-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1057501-4161-COT25 (brazalete neonatal  doble tubo...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4161-COT25] +2 pts. Keyword Título: 'reutilizable'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4161-COT25] Puntuación Fase 1 Total: 2
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1057501-4161-COT25 omitida. Puntuación: 2 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-411-COT25 (adquisicion de material educat...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-411-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-411-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1057501-4160-COT25 (flujometro pocketpeak...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4160-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1057501-4160-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-410-COT25 (adquisicion de vestuario para ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-410-COT25] +2 pts. Keyword Título: 'escuela'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-410-COT25] Puntuación Fase 1 Total: 2
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-410-COT25 omitida. Puntuación: 2 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1233623-857-COT25 (colaciones - escuela de párvul...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1233623-857-COT25] +2 pts. Keyword Título: 'escuela'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1233623-857-COT25] Puntuación Fase 1 Total: 2
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1233623-857-COT25 omitida. Puntuación: 2 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1057501-4159-COT25 (filtro ventilador servoy servo...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4159-COT25] +2 pts. Keyword Título: 'filtro'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4159-COT25] +2 pts. Keyword Título: 'ventilador'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4159-COT25] Puntuación Fase 1 Total: 4
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1057501-4159-COT25 omitida. Puntuación: 4 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 3754-233-COT25 (adquiscion de materiales de co...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [3754-233-COT25] +5 pts. Organismo: I MUNICIPALIDAD DE CANELA
+2025-11-03 21:46:45 - score_engine - DEBUG - [3754-233-COT25] Puntuación Fase 1 Total: 5
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-409-COT25 (adquisicion flautas dulces par...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-409-COT25] +2 pts. Keyword Título: 'flautas'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-409-COT25] +2 pts. Keyword Título: 'escuela'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-409-COT25] +2 pts. Keyword Título: 'dulces'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-409-COT25] Puntuación Fase 1 Total: 6
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2269-79-COT25 (se solicita cotización para se...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2269-79-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2269-79-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1484-224-COT25 (lista de materiales para red e...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1484-224-COT25] +5 pts. Organismo: DEPARTAMENTO PROVINCIAL DE EDUCACIÓN ARAUCO
+2025-11-03 21:46:45 - score_engine - DEBUG - [1484-224-COT25] Puntuación Fase 1 Total: 5
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-408-COT25 (adquisicion de estandarte esco...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-408-COT25] +2 pts. Keyword Título: 'escuela'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-408-COT25] Puntuación Fase 1 Total: 2
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-408-COT25 omitida. Puntuación: 2 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1233623-856-COT25 (tintas y/o toner para esc. ped...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1233623-856-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1233623-856-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1057501-4158-COT25 (filtro exhalatorio reutilizabl...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4158-COT25] +2 pts. Keyword Título: 'filtro'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4158-COT25] +2 pts. Keyword Título: 'reutilizable'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4158-COT25] +2 pts. Keyword Título: 'ventilador'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4158-COT25] +2 pts. Keyword Título: 'avea'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4158-COT25] Puntuación Fase 1 Total: 8
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-407-COT25 (adquisicion y entrega de retab...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-407-COT25] +2 pts. Keyword Título: 'escuela'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-407-COT25] Puntuación Fase 1 Total: 2
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-407-COT25 omitida. Puntuación: 2 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1057501-4157-COT25 (bolsa reservorio de o2 p/resuc...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4157-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1057501-4157-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1233623-855-COT25 (traslado - escuela de párvulos...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1233623-855-COT25] +2 pts. Keyword Título: 'escuela'
+2025-11-03 21:46:45 - score_engine - DEBUG - [1233623-855-COT25] Puntuación Fase 1 Total: 2
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1233623-855-COT25 omitida. Puntuación: 2 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3745-COT25 (20-38461 productos de laborato...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3745-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3745-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1057501-4156-COT25 (valvula peep equivalente ambu ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4156-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1057501-4156-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-406-COT25 (adquisicion y entrega de pack ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-406-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-406-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1057501-4155-COT25 (ampolleta 12vx100w osram 64627...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1057501-4155-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1057501-4155-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1233623-854-COT25 (toner para esc. llamito blanco...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1233623-854-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1233623-854-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 5504-442-COT25 (cables de audio ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [5504-442-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 5504-442-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3744-COT25 (20-38688 servicio de acrilicos...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3744-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3744-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1233623-853-COT25 (stand pinta caritas - subdirec...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1233623-853-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1233623-853-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3743-COT25 (20-38710 servicio de alimentac...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3743-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3743-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 3046-347-COT25 (bam 158 cm insumos instalacion...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [3046-347-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 3046-347-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3742-COT25 (20-38686 servicio de coffee...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3742-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3742-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1461054-405-COT25 (adquisicion y entrega de galva...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1461054-405-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1461054-405-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3741-COT25 (20-38651 servicio de impresión...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3741-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3741-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 560224-403-COT25 (insumos desechables, solicitad...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [560224-403-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 560224-403-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3739-COT25 (20-38707 arriendo proyector y ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3739-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3739-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 966131-68-COT25 (servicio de auditoría interna ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [966131-68-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 966131-68-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 3149-366-COT25 (compra de galvanos, medallas, ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [3149-366-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 3149-366-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3740-COT25 (20-38646 servicio de transport...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3740-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3740-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 5441-788-COT25 (pma 38927 insumos para laborat...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [5441-788-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 5441-788-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1484-223-COT25 (red pewma trabun - materiales...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1484-223-COT25] +5 pts. Organismo: DEPARTAMENTO PROVINCIAL DE EDUCACIÓN ARAUCO
+2025-11-03 21:46:45 - score_engine - DEBUG - [1484-223-COT25] Puntuación Fase 1 Total: 5
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 5504-441-COT25 (papel autoadhesivo brillante c...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [5504-441-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 5504-441-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 560224-402-COT25 (insumos de alimentos, solicita...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [560224-402-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 560224-402-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 655348-91-COT25 (adquisición de materiales de o...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [655348-91-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 655348-91-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3738-COT25 (20-38641 servicio de transport...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3738-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3738-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3736-COT25 (20-38692 diploma beca mérito e...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3736-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3736-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3737-COT25 (20-38635 servicio coffee...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3737-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3737-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2859-1409-COT25 (adquisición de disco duro en e...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2859-1409-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2859-1409-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2701-816-COT25 (colaciones tipo almuerzo, soli...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2701-816-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2701-816-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1484-222-COT25 (sesion ordinaria comite local ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1484-222-COT25] +5 pts. Organismo: DEPARTAMENTO PROVINCIAL DE EDUCACIÓN ARAUCO
+2025-11-03 21:46:45 - score_engine - DEBUG - [1484-222-COT25] Puntuación Fase 1 Total: 5
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 3046-346-COT25 ( bam 156 cm equipos de comunic...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [3046-346-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 3046-346-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1393093-734-COT25 (se requiere alojamiento y alim...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1393093-734-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1393093-734-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 3492-168-COT25 (insumos dentales prog. salud b...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [3492-168-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 3492-168-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2793-1169-COT25 (compra de accesorios para equi...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2793-1169-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2793-1169-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2776-1170-COT25 ( s.p. n°171303, dao. compra de...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2776-1170-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2776-1170-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2859-1408-COT25 (adquisición de equipamiento en...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2859-1408-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2859-1408-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2701-815-COT25 (colaciones, solicitado por adm...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2701-815-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2701-815-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 17120-60-COT25 (compra  " impresora hp color l...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [17120-60-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 17120-60-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2730-417-COT25 (adquisicion de chaqueta oln...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2730-417-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2730-417-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1469-3734-COT25 (20-38687 arriendo de vehículo...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1469-3734-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1469-3734-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1380-5629-COT25 (contratación de servicios de c...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1380-5629-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1380-5629-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 3891-295-COT25 (se solicita servicio recarga d...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [3891-295-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 3891-295-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1562-152-COT25 (servicio de toma de imágenes t...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1562-152-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1562-152-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2395-1069-COT25 ( (sol. ped. 1339) provisión e ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2395-1069-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2395-1069-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2776-1169-COT25 (s.p. n°169787,dideco. contrata...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2776-1169-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2776-1169-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1234683-84-COT25 (adquicision de poleras corpora...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1234683-84-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1234683-84-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 4858-731-COT25 (contratación de taxi buses par...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [4858-731-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 4858-731-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 4858-732-COT25 (servicio producción de eventos...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [4858-732-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 4858-732-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2859-1406-COT25 (adquisición de gases para labo...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2859-1406-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2859-1406-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2793-1168-COT25 (adquisicion de toldos para act...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2793-1168-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2793-1168-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2909-1103-COT25 (transporte para alumnos de esc...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2909-1103-COT25] +2 pts. Keyword Título: 'escuela'
+2025-11-03 21:46:45 - score_engine - DEBUG - [2909-1103-COT25] Puntuación Fase 1 Total: 2
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2909-1103-COT25 omitida. Puntuación: 2 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 608-6987-COT25 ((nps) insumos noviembre-porta ...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [608-6987-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 608-6987-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2701-814-COT25 (compra de toldos y carpas, sol...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2701-814-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2701-814-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 835727-254-COT25 (materiales para realizar repos...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [835727-254-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 835727-254-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1425773-57-COT25 (adquisicion servicio de impres...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1425773-57-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1425773-57-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 1485943-4-COT25 (servicio de impresión de artes...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [1485943-4-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 1485943-4-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - score_engine - DEBUG - --- Puntuando CA: 2401-901-COT25 (contratación producción "prime...) ---
+2025-11-03 21:46:45 - score_engine - DEBUG - [2401-901-COT25] Puntuación Fase 1 Total: 0
+2025-11-03 21:46:45 - db_service - DEBUG - Compra 2401-901-COT25 omitida. Puntuación: 0 (Umbral: 5)
+2025-11-03 21:46:45 - db_service - INFO - Procesadas 75 compras únicas
+2025-11-03 21:46:45 - db_service - INFO - Omitidas 0 (sin código o duplicadas)
+2025-11-03 21:46:45 - db_service - INFO - Omitidas 69 por baja puntuación (Score < 5)
+2025-11-03 21:46:45 - db_service - INFO - Commit exitoso: 6 nuevos, 0 actualizados.
+2025-11-03 21:46:45 - scraper_service - INFO - Guardado en BD completado exitosamente.
+2025-11-03 21:46:45 - scraper_service - INFO - ============================================================
+2025-11-03 21:46:45 - scraper_service - INFO - RESUMEN DE SCRAPING (Listado)
+2025-11-03 21:46:45 - scraper_service - INFO - Tiempo total: 24.50 segundos
+2025-11-03 21:46:45 - scraper_service - INFO - Página procesada: 5 / 5
+2025-11-03 21:46:45 - scraper_service - INFO - Total compras procesadas: 75
+2025-11-03 21:46:45 - scraper_service - INFO - ============================================================

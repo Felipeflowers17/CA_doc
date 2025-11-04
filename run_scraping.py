@@ -18,23 +18,23 @@ def main():
     """
     
     # --- EJEMPLO DE FILTROS ---
-    # Queremos scrapear solo las compras de los últimos 2 días
+    # Queremos scrapear solo las compras de los últimos 5 días
     
     # 1. Definir el rango de fechas
     fecha_hoy = datetime.now()
-    fecha_hace_2_dias = fecha_hoy - timedelta(days=2)
+    fecha_hace_2_dias = fecha_hoy - timedelta(days=5)
     
     date_to = fecha_hoy.strftime('%Y-%m-%d')
     date_from = fecha_hace_2_dias.strftime('%Y-%m-%d')
 
-    # 2. Crear el diccionario de filtros (como en tu miniproyecto)
+    # 2. Crear el diccionario de filtros 
     filtros_personalizados = {
         'date_from': date_from,
         'date_to': date_to
     }
     
     # 3. Definir un límite de páginas (para no demorar mucho en la prueba)
-    limite_paginas = 3 # Scrapear solo 3 páginas
+    limite_paginas = 5 # Scrapear solo 5 páginas
 
     print(f"Iniciando scraping... Rango: {date_from} a {date_to}")
     print(f"Límite de páginas: {limite_paginas}")
