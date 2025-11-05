@@ -2,37 +2,31 @@ import datetime
 from typing import Dict, Any
 
 from src.utils.logger import configurar_logger
-
-# Importar las reglas y los datos
-from config.keywords_data import KEYWORDS_PRODUCTOS_ALTO_VALOR, ORGANISMOS_PRIORITARIOS, KEYWORDS_TITULO
+from config.keywords_data import (
+    ORGANISMOS_PRIORITARIOS, 
+    KEYWORDS_TITULO,
+    KEYWORDS_PRODUCTOS_ALTO_VALOR
+)
 from config.score_config import (
-    PUNTOS_KEYWORD_PRODUCTO,
     PUNTOS_ORGANISMO, 
     PUNTOS_SEGUNDO_LLAMADO, 
     PUNTOS_KEYWORD_TITULO, 
-    PUNTOS_ALERTA_URGENCIA
+    PUNTOS_KEYWORD_PRODUCTO
 )
 
-# --- Configurar el logger para este módulo ---
+# Configurar el logger para este módulo
 logger = configurar_logger('score_engine')
-# ---
 
-# --- ¡MEJORA DE ROBUSTEZ! ---
 # Convertimos las listas a minúsculas/mayúsculas UNA SOLA VEZ al iniciar.
-# Esto evita errores si el usuario escribe "Ferreteria" en lugar de "ferreteria".
-# Usamos 'set' para búsquedas más rápidas.
 LISTA_ORGANISMOS = {org.upper() for org in ORGANISMOS_PRIORITARIOS}
 LISTA_KEYWORDS_TITULO = {kw.lower() for kw in KEYWORDS_TITULO}
 LISTA_KEYWORDS_PRODUCTOS = {kw.lower() for kw in KEYWORDS_PRODUCTOS_ALTO_VALOR}
-# ---
 
 
 def calcular_puntuacion_fase_1(ca: Dict[str, Any]) -> int:
     """
     Calcula la puntuación de Fase 1 (Listado Básico) para una CA.
     La CA debe ser un diccionario (como el JSON recibido de la API).
-    
-    NOTA: El criterio "Alerta Urgencia" ha sido deshabilitado temporalmente.
     """
     
     puntos = 0
@@ -43,7 +37,6 @@ def calcular_puntuacion_fase_1(ca: Dict[str, Any]) -> int:
     organismo_ca = str(ca.get('organismo', '')).upper() # Normalizamos a mayúsculas
     estado_texto = str(ca.get('estado', '')).lower()
     
-    # --- Iniciamos log de puntuación ---
     logger.debug(f"--- Puntuando CA: {codigo_ca} ({nombre_ca[:30]}...) ---")
     
     # --- Aplicar Lógica de Puntuación ---
@@ -64,9 +57,7 @@ def calcular_puntuacion_fase_1(ca: Dict[str, Any]) -> int:
             puntos += PUNTOS_KEYWORD_TITULO
             logger.debug(f"[{codigo_ca}] +{PUNTOS_KEYWORD_TITULO} pts. Keyword Título: '{keyword}'")
 
-    # 4. Criterio: Alerta Urgencia (+3)
-    # --- DESHABILITADO ---
-    # (Se eliminó la lógica de proveedores y fechas)
+    # 4. Criterio: Alerta Urgencia (Deshabilitado)
     
     logger.debug(f"[{codigo_ca}] Puntuación Fase 1 Total: {puntos}")
     return puntos
@@ -100,9 +91,6 @@ def calcular_puntuacion_fase_2(ca: Dict[str, Any], datos_ficha: Dict) -> int:
             if keyword in nombre_producto:
                 puntos_fase_2 += PUNTOS_KEYWORD_PRODUCTO
                 logger.debug(f"[{codigo_ca}] +{PUNTOS_KEYWORD_PRODUCTO} pts. Keyword Producto: '{keyword}' en '{nombre_producto}'")
-                # Importante: rompemos el bucle interno para no sumar
-                # puntos varias veces por el mismo producto si tiene
-                # múltiples keywords (ej. "niple codo de tubo")
                 break 
 
     logger.debug(f"[{codigo_ca}] Puntuación Fase 2 Total: {puntos_fase_2}")
